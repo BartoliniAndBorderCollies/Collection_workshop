@@ -87,7 +87,23 @@ public class Main {
 
         System.out.println(menu);
 
+        //----------------------------------------------------------------------------------------------
+        // SET
 
-    }
+        // Set jesli jest taki sam to nie wydrukuje się. Set i List jest bardzo podobny, Set sie preferuje, zeby nie bylo duplikatów.
+        Set<String> imiona = new HashSet<>();
+        imiona.add("Bartek");
+        imiona.add("Szymon");
+        imiona.add("Bartek");
+        imiona.add("Marek");
+
+        System.out.println(imiona);
+        System.out.println(imiona.size());
+
+
+
+
+
+}
 }
 
