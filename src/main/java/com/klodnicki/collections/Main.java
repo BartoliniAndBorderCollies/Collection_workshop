@@ -198,6 +198,23 @@ public class Main {
         joinThreeListsIntoOneUsingStream();
     }
 
+    private static void printNamesWithoutStreamForEach(List<String> names) {
+        HashMap<String, Integer> namesCount = new HashMap<>();
+
+        int count = 0;
+
+        for (String name : names) {
+            for (String name2 : names) {
+                if (name.equals(name2)) {
+                    count++;
+                    namesCount.put(name, count);
+                }
+            }
+            count = 0;
+        }
+        System.out.println(namesCount);
+    }
+
 
 
 
@@ -207,5 +224,5 @@ public class Main {
 
 
 }
-}
+
 
