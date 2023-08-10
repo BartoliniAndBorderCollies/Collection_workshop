@@ -160,6 +160,46 @@ public class Main {
         String foundBartek = bartek.orElseThrow(() -> new RuntimeException("Bartek was not found."));
         System.out.println(foundBartek);
 
+        // ----------------------------------------------------------------------------------------------------
+        // EXERCISES
+
+        // Wypisz listę wszystkich imion razem z liczbą ich powtórzeń:
+        // printNamesWithoutStream()
+        printNamesWithoutStreamForEach(names);
+        printNamesWithoutStreamForLoop(names);
+
+        // printNamesUsingStream()
+        printNamesWithStream(names);
+
+        //wydrukuj najdłuższe imię z ArrayList używając Stream
+
+        printTheLongestName(names);
+
+        groupElementsToMapWhereKeyIsAStringLengthAndValuesAreNamesWithSuchLength(names);
+
+        sortStringsByLengthAndFilterShorterThanTwoAndPrintItOnScreen();
+
+        printAmountOfStringsWhichStartWithBLetter();
+
+        changeStringsToUppercaseAndPrintThem();
+
+        removeDuplicatesFromStringList();
+
+        convertToSetToRemoveDuplicates();
+
+        countAverageForIntegerList();
+
+        countSumOfEvenNumbersAndSumOfOddNumbers();
+
+        findMaximumAndMinimumValueInList();
+
+        findSecondLargestAndSecondLowestNumberInList();
+
+        joinThreeListsIntoOneUsingStream();
+    }
+
+
+
 
 
 
