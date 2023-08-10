@@ -215,8 +215,23 @@ public class Main {
         System.out.println(namesCount);
     }
 
+    private static void printNamesWithoutStreamForLoop(List<String> names) {
+        HashMap<String, Integer> namesCount = new HashMap<>();
 
-
+        String name;
+        int count = 0;
+        for (int i = 0; i < names.size(); i++) {
+            name = names.get(i);
+            for (int j = 0; j < names.size(); j++) {
+                if (name.equals(names.get(j))) {
+                    count++;
+                    namesCount.put(name, count);
+                }
+            }
+            count = 0;
+        }
+        System.out.println(namesCount);
+    }
 
 
 
