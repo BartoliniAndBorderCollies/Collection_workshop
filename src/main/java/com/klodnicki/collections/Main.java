@@ -101,6 +101,68 @@ public class Main {
         System.out.println(imiona.size());
 
 
+//----------------------------------------------------------------------------------------------------------------------
+        //STREAM
+
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            numbers.add(1 + i);
+        }
+
+        System.out.println(numbers);
+//        for (Integer n : numbers) {
+//            System.out.print(n + ", ");
+//        }
+//        System.out.println();
+
+        // Stream: https://www.youtube.com/watch?v=u0ysjMnk7sM
+        // filter
+        // map
+        // sorted
+        // collect
+        // forEach
+
+        // Supplier to interfejs funkcyjny
+        // 4 podstawowe interfejsy funkcyjne to:
+        // Supplier - przyjmuje 0 parametrów, ale coś zwraca
+        // Consumer - przyjmuje 1 parametr, ale nic nie zwraca
+        // (note) BiConsumer
+        // Function - Przyjmuje jakieś parametry i coś zwraca
+        // Predicate - przyjmuje parametr, zwraca boolean
+        Integer findFour = numbers.stream()
+                .filter(x -> {
+                    System.out.print(x + ", ");
+                    return x == 4;
+                })
+                .findFirst()
+                .get();
+
+
+        System.out.println();
+        System.out.println(findFour);
+
+        int result = findFour + 4;
+        System.out.println(result);
+
+
+        //        List<Integer> newNumbersFromStream = Stream.generate(() -> 1).limit(10).toList();
+        List<Integer> newNumbersFromStream = IntStream.rangeClosed(1, 10).boxed().toList();
+
+        System.out.println(newNumbersFromStream);
+        //1+3+2+1+3+2+2+3+2+1+1=
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka");
+
+        Optional<String> bartek = names.stream()
+                .filter(n -> n.equals("Bartek"))
+                .findAny();
+
+        String foundBartek = bartek.orElseThrow(() -> new RuntimeException("Bartek was not found."));
+        System.out.println(foundBartek);
+
+
+
+
 
 
 
