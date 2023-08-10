@@ -50,4 +50,18 @@ public class Main {
 
 
     }
+
+    //-----------------------------------------------------------------------------------------------------------------------
+    //ARRAYLIST
+    ArrayList<Integer> numbersArrList = new ArrayList<>();
+        numbersArrList.add(1);
+        System.out.println(numbersArrList.size());
+
+    // Castowanie
+    long smallNumber = 3_000_000_000L;
+    int anotherNumber = (int) smallNumber;
+    // min int = -2_147_483_646
+    // max int = 2_147_483_647
+
+
 }
