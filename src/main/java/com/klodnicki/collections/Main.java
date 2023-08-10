@@ -233,7 +233,13 @@ public class Main {
         System.out.println(namesCount);
     }
 
+    private static void printNamesWithStream(List<String> names) {
 
+        Map<String, Integer> namesCount = names.stream()
+                .collect(Collectors.toMap(name -> name, name -> 1, Integer::sum));
+
+        System.out.println("To jest zrobione przez Stream" + namesCount);
+    }
 
 
 
