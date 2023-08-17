@@ -241,6 +241,15 @@ public class Main {
         System.out.println("To jest zrobione przez Stream" + namesCount);
     }
 
+    private static void printTheLongestName(List<String> names) {
+
+        String longestName = names.stream()
+                .max(Comparator.comparing(String::length))
+                .orElse("there is no name in stream"); //I put this instead of get() cause no value can exist
+        System.out.println(longestName);
+    }
+
+  
 
 
 
