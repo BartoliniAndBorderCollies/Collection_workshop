@@ -249,7 +249,17 @@ public class Main {
         System.out.println(longestName);
     }
 
-  
+    private static void groupElementsToMapWhereKeyIsAStringLengthAndValuesAreNamesWithSuchLength(List<String> names) {
+
+        Map<Integer, List<String>> groupedNames = names.stream()
+                .collect(Collectors.groupingBy(String::length));
+
+        System.out.println(groupedNames);
+        System.out.println("---------------------------------------------------------------------------------");
+    }
+
+
+
 
 
 
