@@ -274,6 +274,19 @@ public class Main {
     }
 
 
+    public static void printAmountOfStringsWhichStartWithBLetter() {
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka", "Bogdan", "Bogusia");
+
+        Long namesStartWithB = names.stream().
+                filter(s -> s.startsWith("B")).
+                count();
+
+
+        System.out.println(namesStartWithB);
+        System.out.println("-------------------------------------------------------------------------------------");
+    }
+
 
 }
 
