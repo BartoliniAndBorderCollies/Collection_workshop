@@ -258,8 +258,20 @@ public class Main {
         System.out.println("---------------------------------------------------------------------------------");
     }
 
+    private static void sortStringsByLengthAndFilterShorterThanTwoAndPrintItOnScreen() {
 
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka");
 
+        List<String> sortNames = names.stream()
+                .sorted()
+                .filter(s -> s.length() <= 2) // filter out strings shorter than two
+                .toList(); // collect the filtered strings into a list
+
+//        names.stream().sorted().filter(s->s.length() <2).forEach(System.out::println); lub od razu drukowanie
+
+        sortNames.forEach(System.out::println); // print each string on the screen
+    }
 
 
 
