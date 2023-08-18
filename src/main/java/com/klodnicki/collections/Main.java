@@ -311,6 +311,15 @@ public class Main {
         System.out.println("------------------------------------------------------------------------------");
     }
 
+    public static void removeDuplicatesFromStringList() {
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka", "Bogdan", "Bogusia");
+
+        names.stream().distinct().forEach(System.out::println);
+        System.out.println("--------------------------------------------------------------------------------------");
+    }
+
+
 
 }
 
