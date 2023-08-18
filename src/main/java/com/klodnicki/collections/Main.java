@@ -1,5 +1,7 @@
 package com.klodnicki.collections;
 
+import com.klodnicki.generics.Test;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -196,6 +198,8 @@ public class Main {
         findSecondLargestAndSecondLowestNumberInList();
 
         joinThreeListsIntoOneUsingStream();
+
+        Test<Integer, Double> number = new Test<>();
     }
 
     private static void printNamesWithoutStreamForEach(List<String> names) {
@@ -285,6 +289,26 @@ public class Main {
 
         System.out.println(namesStartWithB);
         System.out.println("-------------------------------------------------------------------------------------");
+    }
+
+    public static void changeStringsToUppercaseAndPrintThem() {
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka", "Bogdan", "Bogusia");
+
+        List<String> namesUppercase = names.stream().
+                map(String::toUpperCase)
+                .toList();
+
+        namesUppercase.forEach(System.out::println);
+        System.out.println(namesUppercase);
+
+        //lub drukowanie od razu
+
+        names.stream().map(String::toUpperCase).forEach(System.out::println);
+
+        //lub
+        System.out.println(names.stream().map(String::toUpperCase).collect(Collectors.toList()));
+        System.out.println("------------------------------------------------------------------------------");
     }
 
 
