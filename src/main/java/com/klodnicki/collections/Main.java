@@ -331,11 +331,13 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------");
     }
 
+    public static void countAverageForIntegerList() {
+        List<Integer> numbers = Arrays.asList(1, 3, 5, 14, 20, 34, 56, 98);
 
+        double average = numbers.stream().mapToInt(Integer::intValue).average().orElse(0.0);
 
-
-
-
+        System.out.println("Average: " + average);
+    }
 
 
 }
