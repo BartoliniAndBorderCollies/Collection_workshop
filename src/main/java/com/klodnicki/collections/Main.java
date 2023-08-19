@@ -319,6 +319,23 @@ public class Main {
         System.out.println("--------------------------------------------------------------------------------------");
     }
 
+    public static void convertToSetToRemoveDuplicates() {
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka", "Bogdan", "Bogusia");
+
+        Set<String> namesWithoutDuplicates = new HashSet<>(names);
+
+        List<String> namesListOfStrings = new ArrayList<>(namesWithoutDuplicates);
+
+        System.out.println(namesListOfStrings);
+        System.out.println("----------------------------------------------------------------------------");
+    }
+
+
+
+
+
+
 
 
 }
