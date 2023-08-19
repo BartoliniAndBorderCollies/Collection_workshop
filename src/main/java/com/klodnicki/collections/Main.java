@@ -339,6 +339,18 @@ public class Main {
         System.out.println("Average: " + average);
     }
 
+    public static void countSumOfEvenNumbersAndSumOfOddNumbers() {
+        List<Integer> numbers = Arrays.asList(1, 3, 5, 14, 20, 34, 56, 98, 100, 123, 211, 325);
+
+        double sumOfEvenNumbers = numbers.stream().filter(num -> num % 2 == 0).mapToInt(Integer::intValue).sum();
+        double sumOfOddNumbers = numbers.stream().filter(num -> num % 2 != 0).mapToInt(Integer::intValue).sum();
+
+        System.out.println("Sum of even numbers: " + sumOfEvenNumbers);
+        System.out.println("Sum of odd numbers: " + sumOfOddNumbers);
+        System.out.println("----------------------------------------------------------------------------------------");
+    }
+
+
 
 }
 
