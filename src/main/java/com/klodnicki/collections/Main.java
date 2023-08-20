@@ -15,9 +15,12 @@ public class Main {
         //Collections
         // Array
         // List (interface) -> ArrayList, LinkedList konkretne implementacje
-        // Set (interface) -> HashSet, LinkedHashSet, TreeSet konkretne implementacje - gdy nie chcesz duplikatów
+        // Set (interface) -> HashSet, LinkedHashSet, TreeSet(trzyma kolejność dodawania i unikaty, bez duplikatów) konkretne implementacje - gdy nie chcesz duplikatów
         // Map (interface) -> HashMap, LinkedHashMap, TreeMap konkretne implementacje - gdy potrzebujesz pary wartości
-
+        // Queue (interface) -> LinkedList and PriorityQueue implementations -> FIFO (First In First Out), like in the store, put new items at the back, old ones at the front
+        // Dequeue (interface) -> LinkedList and ArrayDeque implementations -> A deque (“double-ended queue”) is a type of queue that allows us to access elements from the front and the back of the queue.
+        // The Collections utility algorithm static methods like sort(), binarySearch(), max(), min(), and reverse().
+        // Collection stream pipelines and aggregate operations with lambdas.
 
         //--------------------------------------------------------------------------------------------------------------
         //ARRAY
