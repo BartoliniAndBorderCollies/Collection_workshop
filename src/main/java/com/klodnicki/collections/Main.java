@@ -353,7 +353,15 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------------");
     }
 
+    public static void findMaximumAndMinimumValueInList() {
+        List<Integer> numbers = Arrays.asList(1, 2,  3, 5, 14, 20, 34, 56, 98, 100, 123, 211, 325);
 
+        int minValueInList = numbers.stream().mapToInt(Integer::intValue).min().orElse(0);
+        int maxValueInList = numbers.stream().mapToInt(Integer::intValue).max().orElse(0);
+
+        System.out.println("Min value in a list: " + minValueInList);
+        System.out.println("Max value in a list: " + maxValueInList);
+    }
 
 }
 
