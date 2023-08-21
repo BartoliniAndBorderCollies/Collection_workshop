@@ -363,6 +363,17 @@ public class Main {
         System.out.println("Max value in a list: " + maxValueInList);
     }
 
+    public static void findSecondLargestAndSecondLowestNumberInList() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 5, 14, 20, 34, 56, 98, 100, 123, 211, 325);
+
+        int secondLowestValueInList = numbers.stream().sorted().skip(1).findFirst().orElse(0);
+        int secondHighestValueInList = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0);
+
+        System.out.println("Second lowest value in list: " + secondLowestValueInList);
+        System.out.println("Second highest value in list: " + secondHighestValueInList);
+    }
+
+
 }
 
 
