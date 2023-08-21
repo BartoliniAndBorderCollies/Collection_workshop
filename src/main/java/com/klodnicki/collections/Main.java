@@ -373,6 +373,19 @@ public class Main {
         System.out.println("Second highest value in list: " + secondHighestValueInList);
     }
 
+    public static void joinThreeListsIntoOneUsingStream() {
+        List<String> names = Arrays.asList("Dorota", "Bartek", "Szymon", "Aga", "Bartek", "Lala", "Lala", "Bartek",
+                "Szymon", "Weronika", "Zbigniew", "Agnieszka", "Ok", "Ka", "Bogdan", "Bogusia");
+        List<String> cars = Arrays.asList("Volvo", "Bmw", "Fiat");
+        List<String> dogs = Arrays.asList("Border collie", "German Shepherd");
+
+        List<String> joinedList = Stream.of(names.stream(), cars.stream(), dogs.stream())
+                .flatMap(Function.identity())
+                .toList();
+
+        System.out.println("Joined list: " + joinedList);
+    }
+
 
 }
 
