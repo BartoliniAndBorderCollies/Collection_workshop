@@ -1,4 +1,4 @@
-package com.klodnicki.design.patterns.strategy;
+package com.klodnicki.design.patterns.strategy.lesson;
 
 public class CreditCardPayment implements PaymentStrategy {
     private String cardNumber;
